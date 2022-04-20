@@ -7,3 +7,32 @@
   font-family: 'Barlow', sans-serif
 }
 
+body {
+ text-align: center;
+ max-width: 70%;
+}
+
+/* Navigation */
+nav {
+  background-color: aquamarine;
+}
+
+li {
+  display: inline;
+}
+
+
+
+/* Hero */
+.hero {
+  background-color: brown;
+}
+
+
+/* Work */
+
+.container {
+  display: flex;
+  flex: 1fr;
+  max-width: 70%;
+}
