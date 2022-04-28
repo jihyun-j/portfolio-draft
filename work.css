@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,200;1,400;1,500;1,600&display=swap');
- :root {
+ 
+
+/************* Component **************/
+
+:root {
    /* =============== Color =============== */
    --main-color: #3B28CC;
    --gray-color: #B4B4B4;
    --black-color: #2B2B2B;
    --white-color: #ffffff;
 
-   --checkco-main: #26B58A;
+   --checkco-main: #26b58a;
+   --checkco-trasprent: rgba(38, 181, 138, 0.1);
    --checkco-gray:#C5C5C5;
    --checkco-darkgray: #8A8A8A;
 
@@ -24,7 +29,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-}
+    }
 
 body {
     margin: auto;
@@ -34,7 +39,24 @@ body {
     line-height: 28px;
   }
 
-  /* Navigation */
+section {
+    margin:100px 0 100px 0;
+}
+
+.title {
+    font-size: var(--h4-font);
+    color: var(--checkco-main);
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: var(--checkco-darkgray);
+    font-size: var(--h4-font);
+    font-weight: 600;
+}
+
+/************* Navigation **************/
+
 nav {
     display: flex;
     flex-direction:row;
@@ -46,53 +68,76 @@ nav {
   
 nav a {
     text-decoration: none;
-    font-size: var(--body-font);
-    color: var(--gray-color);
+    font-size: var(--h5-font);
     padding: 15px;
   }
 
+nav a {
+    text-decoration: none;
+    font-size: var(--h5-font);
+    padding: 15px;
+    color: #B4B4B4;
+  }
+  
+nav .myname{
+    color: var(--main-color);
+    font-weight: 600;
+  }
+  
+nav a:hover {
+    color: var(--main-color);
+  }
+  
+nav .active {
+    color: var(--main-color);
+  }
 
-/************* Component **************/
+/************* Hero **************/
 
-.title {
-    font-size: var(--h3-font);
-    color: var(--checkco-main);
+.hero-img {
+    max-width: 100vh;
     margin-bottom: 20px;
 }
 
-section {
-    margin:30px 0 30px 0;
-}
-
-  
-
-/************* Hero **************/
 .hero {
     margin-top: 50px;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: var(--h1-font);
+.checkco-logo {
+    width: 140px;
+    height: 90px;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: var(--h4-font);
-    line-height: 30px;
+    color: var(--checkco-darkgray);
+    line-height: 40px;
     margin: auto;
     max-width: 70vh;
     font-style: italic;
     margin-bottom: 20px;
     text-align: center;
 }
-.hero-img {
-    max-width: 100vh;
-    margin-bottom: 50px;
+
+.btn-hifi {
+    background-color: var(--white-color);
+    color: var(--checkco-main);
+    font-size: var(--h5-font);
+    padding: 10px 20px;
+    border: 2px solid var(--checkco-main);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.btn-hifi:hover {
+    background-color: var(--checkco-main);
+    color: var(--white-color);
 }
-/************* Overview **************/
 
 /************* Role-Overview **************/
+
 .role-overview {
     display: flex;
     justify-content: space-between;
@@ -101,21 +146,56 @@ section {
 
 /************* Problem **************/
 .problem .title {
-    color: var(--white-color);
+    color: var(--checkco-main);
+}
+
+.problem-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    
 }
 .problem {
-    background-color: var(--checkco-main);
-    color: var(--white-color);
+    background-color: var(--checkco-trasprent);
+    color: var(--black-color);
     border-radius: 10px;
     padding: 50px;
     font-size: var(--body-font);
-    text-align: center;
 }
 
 /************* Challenge **************/
+
+.challenge-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+}
+
+.challenge-content p {
+    display: flex;
+    align-items: center;
+    background-color: var(--checkco-gray);
+    color: var(--checkco-darkgray);
+    font-size: var(--h5-font);
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+/************* Goals **************/
+
+
+
 
 /************* Process **************/
 .process img {
     width: 100vh;
 }
 
+
+/************* Solution **************/
+.solution img {
+    
+ width: 100vh;
+
+}
