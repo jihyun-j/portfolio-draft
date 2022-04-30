@@ -16,7 +16,7 @@
    --h3-font: 1.953rem;
    --h4-font: 1.563rem;
    --h5-font: 1.25rem;
-   --body-size: 1rem;
+   --body-font: 1rem;
  }
 
 * {
@@ -28,7 +28,7 @@
 
 body {
   margin: auto;
-  max-width:100vh;
+  width: 120vh;
   color: var(--black-color);
 }
 
@@ -40,7 +40,13 @@ nav {
   justify-content: space-between;
   max-width: 100%;
   margin: 50px 0 50px 0;
-  font-weight: 400;
+  font-weight: 500;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: var(--h5-font);
+  padding: 15px;
 }
 
 nav a {
@@ -64,29 +70,41 @@ nav .active {
 }
 
 
-
 /************* Hero **************/
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 50vh;
-  text-align: center;
 }
 
 h1 {
-  font-size: var(--h3-font);
+  font-size: var(--h1-font);
   color: var(--main-color);
   margin-bottom: 1.5rem;
 }
 
 .hero h2 {
-  font-size: var(--h5-font);
+  font-size: var(--h3-font);
   margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hero .seemywork{
+  color: var(--main-color);
+  margin-top: 2rem;
+  font-size: var(--h4-font);
+  font-style: italic;
+  font-weight: 500;
 }
 
 /************* Work **************/
 
 .container {
   display: grid;  
+  /* background-color: aqua; */
  
 }
 
@@ -94,13 +112,12 @@ h1 {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
+  grid-template-columns: 2fr 1.5fr;
+  column-gap: 3rem;
 }
 
 .container img {
-  width: 500px;
-  height: 350px;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -115,6 +132,16 @@ h1 {
   margin-bottom: 20px;
 }
 
+.btn {
+  padding: 10px 25px;
+  border: none;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  font-size: var(--body-font);
+  border-radius: 3px;
+  letter-spacing: 2px;
+
+}
 /************* Footer **************/
 
 footer {

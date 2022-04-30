@@ -32,15 +32,18 @@
     }
 
 body {
-    margin: auto;
-    max-width: 100vh;
+    /* margin: auto; 
+    max-width: 100vh; */
     color: var(--black-color);
     font-size: var(--body-font);
     line-height: 28px;
   }
 
 section {
-    margin:100px 0 100px 0;
+    margin: auto;
+    margin-bottom: 100px;
+    max-width: 100vh;
+
 }
 
 .title {
@@ -53,6 +56,7 @@ section {
     color: var(--checkco-darkgray);
     font-size: var(--h4-font);
     font-weight: 600;
+    margin-bottom: 30px;
 }
 
 /************* Navigation **************/
@@ -61,8 +65,10 @@ nav {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    max-width: 100%;
-    margin: 50px 0 50px 0;
+    align-items: center;
+    max-width: 100vh;
+    margin: auto;
+    padding: 50px 0 50px 0;
     font-weight: 500;
   }
   
@@ -95,8 +101,8 @@ nav .active {
 /************* Hero **************/
 
 .hero-img {
-    max-width: 100vh;
-    margin-bottom: 20px;
+    width: 100%;
+   height: 50%;
 }
 
 .hero {
@@ -115,7 +121,7 @@ nav .active {
     color: var(--checkco-darkgray);
     line-height: 40px;
     margin: auto;
-    max-width: 70vh;
+    max-width: 90vh;
     font-style: italic;
     margin-bottom: 20px;
     text-align: center;
@@ -136,31 +142,41 @@ nav .active {
     color: var(--white-color);
 }
 
-/************* Role-Overview **************/
+/************* Overview **************/
 
-.role-overview {
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.grid-container-col-3{
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 1fr 1fr;
+}
+
+.flex-container {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0 20px 0;
+}
+
+.flex-container h3 {
+    color: var(--checkco-darkgray);
 }
 
 /************* Problem **************/
+
 .problem .title {
     color: var(--checkco-main);
 }
 
-.problem-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 100px;
-    
+.img-problem {
+    width: 100%;
 }
-.problem {
-    background-color: var(--checkco-trasprent);
-    color: var(--black-color);
-    border-radius: 10px;
-    padding: 50px;
-    font-size: var(--body-font);
+
+.prob-1 {
+    grid-column-start: 2;
+    grid-column-end: 2 ;
 }
 
 /************* Challenge **************/
@@ -171,31 +187,48 @@ nav .active {
     column-gap: 50px;
 }
 
-.challenge-content p {
-    display: flex;
-    align-items: center;
-    background-color: var(--checkco-gray);
-    color: var(--checkco-darkgray);
-    font-size: var(--h5-font);
-    line-height: 30px;
-    border-radius: 5px;
-    padding: 30px;
-}
-
 /************* Goals **************/
 
 
+.goals .subtitle {
+    margin-bottom: 20px;
+}
 
-
-/************* Process **************/
-.process img {
-    width: 100vh;
+.goals-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
 }
 
 
-/************* Solution **************/
-.solution img {
-    
- width: 100vh;
+/************* Process **************/
 
+
+.research-content {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+
+.img-research
+{
+    width: 100%;
+    text-align: center;
+}
+
+.flowchart-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+/************* Solution **************/
+
+.solution img {
+    width: 100%;
+}
+
+.solution-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 50px 0 50px 0;
 }
