@@ -214,6 +214,21 @@ nav .active {
     margin-bottom: 30px;
     }
 
+/**************** About *****************/
+.about { 
+    width: 800px;
+    margin: 100px auto;
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about img{
+    width: 300px;
+    height: 200px;
+}
+
 /**************** Media Queries *****************/
 /* @media screen and (max-width: 768px) {
     body {
