@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,200;1,400;1,500;1,600&display=swap');
+
+
+/***************** Components *****************/
+
+ :root {
+   /* =============== Color =============== */
+   --main-color: #3B28CC;
+   --gray-color: #B4B4B4;
+   --black-color: #2B2B2B;
+   --white-color: #ffffff;
+
+   /* =============== Font =============== */
+   --h1-font: 3.052rem;
+   --h2-font: 2.441rem;
+   --h3-font: 1.953rem;
+   --h4-font: 1.563rem;
+   --h5-font: 1.25rem;
+   --body-font: 1rem;
+ }
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+    }
+
+body {
+    margin: auto;
+    max-width: 1100px;
+    background-color: #F4EDEA;
+    color: var(--black-color);
+    font-size: var(--body-font);
+    line-height: 27px;
+    }
+
+/*********** Navigation ************/
+
+nav {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    padding: 50px 0 50px 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: var(--body-font);
+    color: #B4B4B4;
+  }
+  
+  .right-nav {
+    display: flex;
+    column-gap: 20px;
+  }
+  
+  svg {
+    display: block;
+    width: 45px;
+    height: 45px;
+  }
+  
+  nav .myname{
+    color: var(--main-color);
+    font-size: var(--h5-font);
+  }
+  
+  nav a:hover {
+    color: var(--main-color);
+  }
+  
+  nav .active {
+    color: var(--main-color);
+  }
+
+  /**************** About me *******************/
+
+  .about {
+      display: grid;
+      grid-template-columns: 400px 500px;
+      column-gap: 50px;
+      justify-content: center;
+      /* align-items: center; */
+  }
+
+  .about img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .first-para {
+      font-size: var(--h4-font);
+      font-weight: 500;
+      margin: 30px 0;
+  }
+
+  .contact-info {
+      display: flex;
+      column-gap: 20px;
+  }

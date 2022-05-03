@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,200;1,400;1,500;1,600&display=swap');
+ 
+/************* Component **************/
+
+:root {
+   /* =============== Color =============== */
+   --main-color: #3B28CC;
+   --gray-color: #B4B4B4;
+   --black-color: #2B2B2B;
+   --white-color: #ffffff;
+
+   --checkco-main: #26b58a;
+   --checkco-gray:#C5C5C5;
+   --checkco-darkgray: #8A8A8A;
+
+   /* =============== Font =============== */
+   --h1-font: 3.052rem;
+   --h2-font: 2.441rem;
+   --h3-font: 1.953rem;
+   --h4-font: 1.563rem;
+   --h5-font: 1.25rem;
+   --body-font: 1rem;
+   --body2-font: 0.8rem
+   --caption-font:0.64rem;
+ }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: auto;
+    max-width: 1100px;
+    color: var(--black-color);
+    background-color: #F4EDEA;
+    line-height: 30px;
+    }
+
+.title {
+    font-size: var(--h5-font);
+    color: var(--checkco-main);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: right;
+    }
+
+.subtitle {
+    color: var(--checkco-darkgray);
+    font-size: var(--h5-font);
+    font-weight: 600;
+    text-align: right;
+    }
+
+.btn {
+    background-color: var(--white-color);
+    color: var(--checkco-main);
+    font-size: var(--body-font);
+    padding: 10px 20px;
+    border: 1px solid var(--checkco-main);
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+.btn:hover {
+    background-color: var(--checkco-main);
+    color: var(--white-color);
+    }
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: var(--h5-font);
+}
+
+/************* Navigation **************/
+
+nav {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    padding: 50px 0 50px 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: var(--body-font);
+    color: #B4B4B4;
+  }
+  
+  .right-nav {
+    display: flex;
+    column-gap: 20px;
+  }
+  
+  svg {
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin-left: 60px;
+  }
+  
+  nav .myname{
+    color: var(--main-color);
+    font-size: var(--body-font);
+  }
+  
+  nav a:hover {
+    color: var(--main-color);
+  }
+  
+  nav .active {
+    color: var(--main-color);
+  }
+
+/************* Hero **************/
+
+.hero {
+    margin: 50px 0;
+    text-align: center;
+    }
+
+.checkco-logo {
+    width: 140px;
+    height: 90px;
+    margin-bottom: 20px;
+    }
+
+.hero p {
+    font-size: var(--h5-font);
+    color: var(--checkco-darkgray);
+    margin: auto;
+    max-width: 600px;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+
+/************* Grid Container **************/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 10% 80%;
+    justify-content: center;
+    column-gap: 50px;
+    margin: 100px auto; 
+    }
+
+.grid-container-col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    }
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    }
+
+/************* Flex Container **************/
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    }
+
+h3 {
+    color: var(--checkco-darkgray);
+    font-size: var(--body-font);
+    }
+
+/**************** Problem *****************/
+
+.img-problem {
+    width: 100%;
+    }
+
+/**************** Challenge *****************/
+
+.challenge p {
+    font-size: var(--body-font);
+    font-weight: 600;
+    }
+
+/**************** Goals *****************/
+.goal li {
+    list-style: none;
+}
+
+/**************** Process *****************/
+
+.grid-container-col-3 p {
+    background-color: var(--checkco-gray);
+    border-radius: 10px;
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+}
+
+.research-content {
+    grid-row: 2;
+    grid-column: 2;
+    margin-top: 20px;
+    }
+
+.img-research {
+    width: 100%;
+    text-align: center;
+    border: 5px solid var(--checkco-main);
+    border-radius: 10px;
+    }
+
+/**************** Solution *****************/
+
+.grid-solution {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;  
+}
+
+.grid-solution img {
+    width: 50%;
+    border-radius: 10px;
+    border: 1px solid var(--checkco-main);
+}
+
+.grid-solution .subtitle {
+    text-align: right;
+}
+
+.deliverable {
+    text-align: center;
+    }
+
+.deliverable p {
+    font-size: var(--h3-font);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 30px;
+    }
+
+/**************** Footer *****************/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+  }
+
+
+/**************** Media Queries *****************/
+/* @media screen and (max-width: 768px) {
+    body {
+        max-width: 668px;
+        line-height: 24px;
+    }
+
+    .title {
+        font-size: var(--h4-font);
+    }
+    
+    .subtitle {
+        font-size: (--h5-font);
+    }
+
+    .challenge p{
+        font-size: (var(--body-font));
+        font-weight: 500;
+    }
+
+    .grid-container{
+        column-gap: 15px;
+    }
+
+    .grid-content {
+        column-gap: 20px;
+    }
+}
+
+
+@media screen and (max-width: 820px) {
+    body {
+        max-width: 720px;
+        line-height: 26px;
+    }
+
+    .title {
+        font-size: var(--h4-font);
+    }
+    
+    .subtitle {
+        font-size: (--h5-font);
+    }
+
+    .challenge p{
+        font-size: (var(--body-font));
+        font-weight: 500;
+    }
+
+    .grid-container{
+        column-gap: 10px;
+    }
+
+    .grid-content {
+        column-gap: 15px;
+    }
+} */
+
+
