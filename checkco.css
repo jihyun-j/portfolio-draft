@@ -19,7 +19,7 @@
 --h4-font: 1.563rem;
 --h5-font: 1.25rem;
 --body-font: 1rem;
---body2-font: 0.8rem
+--body2-font: 0.8rem;
 --caption-font:0.64rem;
 }
 
@@ -29,18 +29,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     }
-  
+
 body {
     margin: auto;
-    max-width: 1100px;
+    max-width: 1200px;
     color: var(--black-color);
-    background-color: var(--white-color);
     font-size: var(--body-font);
     }
 
-hr {
-    margin: 100px 0;
-    }
+
 
 small {
     text-transform: uppercase;
@@ -51,7 +48,7 @@ small {
     font-size: var(--body-font);
     color: var(--checkco-main);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     }
 
 .subtitle {
@@ -82,14 +79,14 @@ nav {
     flex-direction:row;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    padding: 50px 0 50px 0;
+    max-width: 1200px;
+    margin-top: 20px;
     }
 
 nav a {
     text-decoration: none;
     font-size: var(--body-font);
-    color: #B4B4B4;
+    color: var(--gray-color);
     }
 
 .right-nav {
@@ -101,24 +98,6 @@ svg {
     width: 40px;
     height: 40px;
     }
-
-.active {
-    color: var(--main-color);
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-}
-
-nav a:link,
-nav a:visited {
-    color:var(--gray-color);
-}
-
-nav a:hover,
-nav a:active {
-    color: var(--main-color);
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-}
 
 /************* Hero **************/
 
@@ -143,7 +122,24 @@ nav a:active {
     text-align: center;
     }
 
+.img-checkco-hero {
+    width: 100%;
+    height: 50vw;
+    }
 /************* Flex Container **************/
+
+.overview-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:stretch;
+    margin-top: 30px;
+}
+
+.overview-container 
+
+
+
 
 .flex-container {
     display: flex;
@@ -157,6 +153,12 @@ h3 {
 
 /************* Grid Container **************/
 
+
+
+
+
+
+
 .grid-container {
     display: grid;
     max-width: 100%;
@@ -165,6 +167,8 @@ h3 {
     column-gap: 10%;
     margin: 100px auto; 
     }
+
+
 
 .grid-container-col-3 {
     display: grid;
