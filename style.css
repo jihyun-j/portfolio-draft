@@ -62,6 +62,53 @@ svg {
   height: 40px;
   }
 
+.right-nav .dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-transform: translate(-158px, 25px);
+  transform: translate(-158px, 25px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.right-nav a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translate(-158px, 25px);
+  transform: translate(-158px, 25px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.right-nav a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translate(-105px, 25px);
+  transform: translate(-105px, 25px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.right-nav a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translate(-47px, 25px);
+  transform: translate(-47px, 25px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.active {
+  color: var(--main-color)
+}
+.active ~ .dot {
+  -webkit-transform: translate(-158px, 25px);
+  transform: translate(-158px, 25px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
 /************* Hero **************/
 
 .hero {
@@ -75,6 +122,7 @@ svg {
 h1 {
   font-size: var(--h1-font);
   color: var(--main-color);
+  margin-bottom: 20px;
   }
 
 .hero h2 {
@@ -82,7 +130,7 @@ h1 {
   color: var(--black-color);
   font-weight: 400;
   max-width: 650px;
-  line-height: 40px;
+  line-height: 32px;
   text-align: center;
   }
 
@@ -139,8 +187,6 @@ h1 {
   margin-top: 20px;
   }
 
-
-
 /************* Footer **************/
 
 footer {
@@ -155,22 +201,54 @@ footer {
 
 footer .title {
   font-size: var(--h2-font);
-  color: var(--white-color);
+  color: var(--main-color);
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 footer .footer-content {
   font-size: var(--h5-font);
-  color: #ffffff;
+  color: var(--main-color);
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 footer a {
   text-decoration: none;
   color: #8c8c8c;
+  padding-right: 10px;
 }
 
-/************* Animation **************/
+footer .footer-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-10px, 2px);
+  transform: translate(-10px, 2px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+footer a:nth-child(1):hover ~ .footer-dot {
+  -webkit-transform: translate(28px, 2px);
+  transform: translate(28px, 2px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+footer a:nth-child(2):hover ~ .footer-dot {
+  -webkit-transform: translate(96px, 2px);
+  transform: translate(96px, 2px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+footer a:hover {
+  color: var(--main-color);
+}
+
 
