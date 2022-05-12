@@ -25,6 +25,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-family:'Alegreya Sans' ; */
   font-family: 'poppins', sans-serif;
   }
 
@@ -164,6 +165,10 @@ h1 {
 .flex-container img:hover {
   transform: scale(1.05);
   }
+
+.img-x1networks:hover {
+  cursor:no-drop;
+}
 
 .flex-container small {
   background-color: rgba(198, 221, 255, 0.714);
