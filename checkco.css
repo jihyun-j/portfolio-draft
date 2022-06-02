@@ -1,80 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,200;1,400;1,500;1,600&display=swap');
-
-/*************** Component ****************/
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap');
+ 
 :root {
 /* =============== Color =============== */
---main-color: #263FA1;
---gray-color: #8c8c8c;
---black-color: #2B2B2B;
---white-color: #ffffff;
---checkco-main: #26b58a;
---checkco-gray:#C5C5C5;
---checkco-darkgray: #8A8A8A;
+    --main-color: #0B65D6;
+    --gray-color: #8c8c8c;
+    --black-color: #424242;
+    --white-color: #ffffff;
 
-/* =============== Font =============== */
---h1-font: 3.052rem;
---h2-font: 2.441rem;
---h3-font: 1.953rem;
---h4-font: 1.563rem;
---h5-font: 1.25rem;
---body-font: 1rem;
---body2-font: 0.9rem;
---caption-font:0.64rem;
+    --checkco-main: #26b58a;
+    --checkco-gray:#C5C5C5;
+    --checkco-darkgray: #8A8A8A;
+    --background-color:#eaf5d4;
+    
+/* ================= Font ================= */
+    --h1-font: 3.052rem;
+    --h2-font: 2.441rem;
+    --h3-font: 1.953rem;
+    --h4-font: 1.563rem;
+    --h5-font: 1.25rem;
+    --body-font: 1rem;
+    --caption-font: 0.8rem;
 }
 
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'outfit', sans-serif;
 }
 
 body {
     margin: auto;
     max-width: 1200px;
+    font-size: var(--body-font);
     color: var(--black-color);
-    font-size: var(--body2-font);
-    color: var(--black-color);
+    font-weight: 300;
     overflow-x: hidden;
+    line-height: 25px;
 }
 
-small {
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.title {
-    font-size: var(--h5-font);
-    color: var(--checkco-main);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 20px 0;
-}
-
-.subtitle {
-    font-size: var(--body-font);
-    font-weight: 500;
-    color: var(--checkco-darkgray);
-}
-
-.btn {
-    background-color: var(--white-color);
-    font-size: var(--body-font);
-    padding: 10px 20px;
-    color: var(--checkco-main);
-    border: 1px solid var(--checkco-main);
-    border-radius: 5px;
-    margin: 0 15px 30px 0;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: var(--checkco-main);
-    color: var(--white-color);
-}
-
-/************* Navigation **************/
+/* Nevigation */
 
 nav {
     display: flex;
@@ -82,23 +47,26 @@ nav {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin-top: 20px;
+    padding-top: 30px;
 }
-
+  
 nav a {
     text-decoration: none;
     font-size: var(--body-font);
     color: var(--gray-color);
 }
 
-.right-nav {
-    display: flex;
-    column-gap: 20px;
-}
-
 svg {
     width: 40px;
     height: 40px;
+}
+
+.right-nav{
+    display: flex;
+}
+
+.margin {
+    padding-left: 30px;
 }
 
 .right-nav .dot {
@@ -107,31 +75,31 @@ svg {
     background-color: var(--main-color);
     border-radius: 50%;
     opacity: 1;
-    -webkit-transform: translate(-158px, 25px);
-    transform: translate(-158px, 25px);
+    -webkit-transform: translate(-150px, 25px);
+    transform: translate(-150px, 25px);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
 .right-nav a:nth-child(1):hover ~ .dot {
-    -webkit-transform: translate(-158px, 25px);
-    transform: translate(-158px, 25px);
+    -webkit-transform: translate(-150px, 25px);
+    transform: translate(-150px, 25px);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     opacity: 1;
 }
 
 .right-nav a:nth-child(2):hover ~ .dot {
-    -webkit-transform: translate(-105px, 25px);
-    transform: translate(-105px, 25px);
+    -webkit-transform: translate(-89px, 25px);
+    transform: translate(-89px, 25px);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     opacity: 1;
 }
 
 .right-nav a:nth-child(3):hover ~ .dot {
-    -webkit-transform: translate(-47px, 25px);
-    transform: translate(-47px, 25px);
+    -webkit-transform: translate(-24px, 25px);
+    transform: translate(-24px, 25px);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     opacity: 1;
@@ -142,220 +110,131 @@ svg {
 }
 
 .active ~ .dot {
-    -webkit-transform: translate(-158px, 25px);
-    transform: translate(-158px, 25px);
+    -webkit-transform: translate(-150px, 25px);
+    transform: translate(-150px, 25px);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     opacity: 1;
 }
-  
-/************* Hero **************/
 
-.hero-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    line-height: 32px;
+/************ Width Setting *************/
+
+.wide-width {
+    max-width: 900px;
+    margin: 50px auto;
 }
 
-.hero-title {
-    font-size: var(--h3-font);
-    font-weight: 600;
-    color: var(--checkco-main);
-    margin-bottom: 30px;
+.narrow-width {
+    max-width: 700px;
+    margin: 50px auto;
 }
-
-.hero-explain {
-    font-size: var(--h5-font);
-    color: var(--checkco-darkgray);
-    margin-bottom: 30px;
-}
-
-.hero-container h3 {
-    color: var(--checkco-darkgray);
-    text-transform: uppercase;
-}
-
-.hero-row-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: var(--body2-font);
-}
-
-.img-checkco-hero {
-    width: 50%;
-}
-
-/************* Case Study Content **************/
-
-/* Center Width */
-
-.center-width {
-    max-width: 850px;
-    width: 100%;
-    margin: 100px auto;
-    line-height: 25px;
-}
-
-.center-width ul {
-    list-style-position: inside;
-    margin-bottom: 20px;
-}
-
-.img-problem {
-   width: 100%;
-}
-
-/* Full Width */
 
 .full-width {
     margin: 0 -9999rem;
-    padding: 3rem 9999rem;
-    background-color: #a3ffe270; 
+    padding: 1rem 9999rem;
+    background-color: var(--checkco-main);
     line-height: 32px;
-    text-align: center;
 }
 
-.full-width .title {
-    color: #2B2B2B;
-    text-align: center;
+.full-width-background {
+    margin: 0 -9999rem;
+    padding: 1rem 9999rem;
+    background-color: #eaf5d4;
+    line-height: 32px;
 }
 
-.full-width .subtitle {
-    color: #2B2B2B;
-    text-align: center;
-}
-
-.challenge-statement {
-    font-size: var(--h5-font);
-    font-weight: 600;
-}
-
-/* Grid Colunm */
-
-.grid-container-col-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    margin: 50px 0;
-    justify-content: center;
-    align-items: center;
-}
-
-.grid-container-col-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 50px 0; 
-    justify-content: space-between;
-    column-gap: 100px;
-    text-align: center;
-}
-
-.challenges .title {
-    color: var(--white-color);
-    text-align: center;
-}
-
-.img-research {
+section img {
     width: 100%;
 }
 
-/************* Solution **************/
+/************* Typography Setting *************/
 
-.solution-grid {
-    display: grid;
-    justify-content: center;
-    column-gap: 30px;
+.title {
+    color: var(--checkco-main);
+    font-weight: 500;
+    font-size: var(--h5-font);
+    margin-bottom: 10px;
 }
 
-.solution-container {
+/************* Hero *************/
+
+.hero-grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 30px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+} 
+
+.hero-title {
+    color: var(--checkco-main);
+    font-size: var(--h4-font);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.hero-explain {
+    color: var(--checkco-darkgray);
+    font-size: var(--body-font);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.hero-info-container {
+    color: var(--checkco-darkgray);
+    font-size: var(--caption-font);
+    line-height: 20px;
+}
+
+.hero-info {
+    margin-bottom: 10px;
+}
+
+/************* HMW *************/
+
+.center {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #d8fef3;
+}
+
+
+
+
+
+/************* Key insights *************/
+
+.col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+}
+
+.col-3 p {
+    background-color: #d8fef3;
+    padding: 30px;
+}
+    
+
+
+
+
+
+
+ 
+
+/************* Solution *************/
+.full-width img,
+.full-width-background img{
+   max-width: 100%;
+}
+
+.full-width .grid,
+.full-width-background .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.img-container {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.img-solution {
-    width: 250px;
-}
-
-
-/************** Footer ****************/
-
-
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 300px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    padding: 30px;
-    }
-  
-  footer .title {
-    font-size: var(--h2-font);
-    color: var(--main-color);
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  footer .footer-content {
-    font-size: var(--h5-font);
-    color: var(--main-color);
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-
-  footer .next {
-      text-align: right;
-      font-size: var(--h5-font);
-  }
-  
-  footer a {
-    text-decoration: none;
-    color: #8c8c8c;
-    padding-right: 10px;
-  }
-  
-  footer .footer-dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--main-color);
-    border-radius: 50%;
-    opacity: 0;
-    -webkit-transform: translate(-10px, 2px);
-    transform: translate(-10px, 2px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  footer a:nth-child(1):hover ~ .footer-dot {
-    -webkit-transform: translate(28px, 2px);
-    transform: translate(28px, 2px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    opacity: 1;
-  }
-  
-  footer a:nth-child(2):hover ~ .footer-dot {
-    -webkit-transform: translate(96px, 2px);
-    transform: translate(96px, 2px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    opacity: 1;
-  }
-  
-  footer a:hover {
-    color: var(--main-color);
-  }
-  
-  
-
 
