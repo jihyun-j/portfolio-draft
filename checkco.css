@@ -121,12 +121,12 @@ svg {
 
 .wide-width {
     max-width: 900px;
-    margin: 50px auto;
+    margin: 100px auto;
 }
 
 .narrow-width {
     max-width: 700px;
-    margin: 50px auto;
+    margin: 100px auto;
 }
 
 .full-width {
@@ -161,7 +161,6 @@ section img {
 .hero-grid-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: 30px;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -174,6 +173,16 @@ section img {
     margin-bottom: 10px;
 }
 
+.btn-prototpye {
+    color: var(--checkco-darkgray);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-prototpye:hover {
+    color: var(--checkco-main);
+}
+ 
 .hero-explain {
     color: var(--checkco-darkgray);
     font-size: var(--body-font);
@@ -183,12 +192,20 @@ section img {
 
 .hero-info-container {
     color: var(--checkco-darkgray);
-    font-size: var(--caption-font);
+    border-left: 1px solid var(--checkco-darkgray);
     line-height: 20px;
 }
 
 .hero-info {
     margin-bottom: 10px;
+    padding-left: 20px;
+    line-height: 25px;
+    /* font-size: var(--caption-font); */
+}
+
+.hero-info-title {
+    color: var(--checkco-main);
+    font-weight: 500;
 }
 
 /************* HMW *************/
@@ -196,10 +213,25 @@ section img {
 .center {
     padding: 50px 0;
     text-align: center;
-    background-color: #d8fef3;
+    background-color: #CBFBE7;
 }
 
+.design-challenge {
+    font-size: var(--h5-font);
+    font-style: italic;
+}
 
+/************* Goal *************/
+.goal-content {
+     margin-bottom: 25px ;
+
+}
+
+.goal-content h3 {
+    color: var(--checkco-darkgray);
+}
+
+/************* Research *************/
 
 
 
