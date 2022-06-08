@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
  
+
 :root {
 /* =============== Color =============== */
     --main-color: #0B65D6;
@@ -8,11 +10,10 @@
     --white-color: #ffffff;
 
     --checkco-main: #26b58a;
-    --checkco-gray:#C5C5C5;
-    --checkco-darkgray: #8A8A8A;
-    --background-color:#eaf5d4;
+    --background-color:#26b58a1d;
     
 /* ================= Font ================= */
+
     --h1-font: 3.052rem;
     --h2-font: 2.441rem;
     --h3-font: 1.953rem;
@@ -48,6 +49,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     padding-top: 30px;
+    font-weight: 400;
 }
   
 nav a {
@@ -131,15 +133,14 @@ svg {
 
 .full-width {
     margin: 0 -9999rem;
-    padding: 1rem 9999rem;
-    background-color: var(--checkco-main);
+    padding: 3rem 9999rem;
+    background-color: var(--background-color);
     line-height: 32px;
 }
 
 .full-width-background {
     margin: 0 -9999rem;
-    padding: 1rem 9999rem;
-    background-color: #eaf5d4;
+    padding: 3rem 9999rem;
     line-height: 32px;
 }
 
@@ -151,7 +152,7 @@ section img {
 
 .title {
     color: var(--checkco-main);
-    font-weight: 500;
+    font-weight: 400;
     font-size: var(--h5-font);
     margin-bottom: 10px;
 }
@@ -192,7 +193,7 @@ section img {
 
 .hero-info-container {
     color: var(--checkco-darkgray);
-    border-left: 1px solid var(--checkco-darkgray);
+    border-left: 1px solid var(--gray-color);
     line-height: 20px;
 }
 
@@ -210,32 +211,66 @@ section img {
 
 /************* HMW *************/
 
+figure {
+    margin-bottom: 20px;
+}
+figcaption {
+    color: gray;
+    font-size: var(--caption-font);
+    line-height: 10px;
+}
+
 .center {
-    padding: 50px 0;
+    padding: 50px 50px;
     text-align: center;
-    background-color: #CBFBE7;
+    background-color: var(--background-color); 
 }
 
 .design-challenge {
+    margin-top: 20px;
     font-size: var(--h5-font);
+    font-weight: 400;
     font-style: italic;
+    line-height: 30px;
 }
 
 /************* Goal *************/
 .goal-content {
-     margin-bottom: 25px ;
-
+    margin-bottom: 25px ;
 }
 
-.goal-content h3 {
-    color: var(--checkco-darkgray);
+.goal-content h4 {
+    
+    font-weight: 500;
 }
 
 /************* Research *************/
-
+.assumptions {
+    margin-bottom: 30px;
+}
+.assumptions h4 {
+    
+    font-weight: 500;
+}
 
 
 /************* Key insights *************/
+
+.key-insights {
+    color: var(--black-color);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 40px;
+}
+
+.number {
+    color: var(--checkco-main);
+    font-size: var(--h2-font);
+    font-weight: 400;
+    padding-right: 20px;
+    line-height: 40px;
+}
 
 .col-3 {
     display: grid;
@@ -244,17 +279,10 @@ section img {
 }
 
 .col-3 p {
-    background-color: #d8fef3;
+    background-color: var(--background-color);
     padding: 30px;
 }
-    
 
-
-
-
-
-
- 
 
 /************* Solution *************/
 .full-width img,
@@ -269,4 +297,81 @@ section img {
     justify-content: center;
     align-items: center;
 }
+
+.bold {
+    font-weight: 400;
+}
+
+.feature-explain-left {
+    margin-left: 50px;
+}
+
+.feature-explain-right {
+    margin-right: 50px;
+}
+
+
+/************* Footer **************/
+
+footer {
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 300px;
+font-weight: 400;
+}
+
+footer .title {
+font-size: var(--h3-font);
+font-family: 'IBM Plex Serif', serif;
+font-style: italic;
+color: var(--main-color);
+font-weight: 600;
+margin-bottom: 10px;
+}
+
+footer .footer-content {
+font-size: var(--h5-font);
+margin-bottom: 10px;
+}
+
+footer a {
+text-decoration: none;
+font-size: var(--h5-font);
+color: #8c8c8c;
+padding-right: 10px;
+}
+
+footer .footer-dot {
+width: 6px;
+height: 6px;
+background-color: var(--main-color);
+border-radius: 50%;
+opacity: 0;
+-webkit-transform: translate(-10px, 2px);
+transform: translate(-10px, 2px);
+-webkit-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+
+footer a:nth-child(1):hover ~ .footer-dot {
+-webkit-transform: translate(35px, 2px);
+transform: translate(35px, 2px);
+-webkit-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+opacity: 1;
+}
+
+footer a:nth-child(2):hover ~ .footer-dot {
+-webkit-transform: translate(110px, 2px);
+transform: translate(110px, 2px);
+-webkit-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+opacity: 1;
+}
+
+footer a:hover {
+color: var(--main-color);
+}
+
 

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 /***************** Components *****************/
 
 :root {
@@ -54,15 +54,15 @@ nav a {
 svg {
   width: 40px;
   height: 40px;
-}
+  }
 
 .right-nav {
   display: flex;
-}
+  }
 
 .margin {
   padding-left: 30px;
-}
+  }
 
 .right-nav .dot {
   width: 6px;
@@ -74,7 +74,7 @@ svg {
   transform: translate(-150px, 25px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
+  }
 
 .right-nav a:nth-child(1):hover ~ .dot {
   -webkit-transform: translate(-150px, 25px);
@@ -82,7 +82,7 @@ svg {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
-}
+  }
 
 .right-nav a:nth-child(2):hover ~ .dot {
   -webkit-transform: translate(-89px, 25px);
@@ -90,7 +90,7 @@ svg {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
-}
+  }
 
 .right-nav a:nth-child(3):hover ~ .dot {
   -webkit-transform: translate(-24px, 25px);
@@ -98,11 +98,11 @@ svg {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
-}
+  }
 
 .active {
   color: var(--main-color)
-}
+  }
 
 .active ~ .dot {
   -webkit-transform: translate(-150px, 25px);
@@ -110,7 +110,7 @@ svg {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
-}
+  }
 
 /************* Hero **************/
 
@@ -118,26 +118,39 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90vh;
+  height: 60vh;
   }
 
-h1 {
-  font-size: 110px;
-  color: var(--main-color);
-  margin-bottom: 20px;
-  /* text-shadow: 4px 5px var(--black-color);
-  letter-spacing: -3px; */
-  }
-
-.hero h2 {
-  font-size: var(--h5-font);
-  color: var(--gray-color);
+.hero p {
+  font-size: var(--h1-font);
   font-weight: 300;
-  max-width: 540px;
-  line-height: 28px;
-  /* font-style: italic; */
-  /* text-align: center; */
-  }
+}
+
+.hero .myname {
+  font-family: 'IBM Plex Serif', serif;
+  color: var(--main-color);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--h4-font);
+  /* color: var(--main-color); */
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arrow p {
+  margin-bottom: 15px;
+}
+
+.arrow svg {
+  margin-bottom: 100px;
+}
+
 
 /************* Selected Work **************/
 
@@ -171,7 +184,7 @@ h1 {
 
 .img-x1networks:hover {
   cursor:no-drop;
-}
+  }
 
 .date-role {
   font-size: var(--body-font);
@@ -182,7 +195,7 @@ h1 {
   font-size: var(--h4-font);
   font-weight: 500;
   padding: 5px 0 15px 0;
-}
+  }
 
 .project-info {
   position: relative;
@@ -195,25 +208,27 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 200px;
+  height: 300px;
   }
 
 footer .title {
-  font-size: var(--h1-font);
+  font-size: var(--h3-font);
+  font-family: 'IBM Plex Serif', serif;
+  font-style: italic;
   color: var(--main-color);
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 footer .footer-content {
-  font-size: var(--h4-font);
-  color: var(--main-color);
-  font-weight: 500;
+  font-size: var(--h5-font);
+  
   margin-bottom: 10px;
 }
 
 footer a {
   text-decoration: none;
+  font-size: var(--h5-font);
   color: #8c8c8c;
   padding-right: 10px;
 }
@@ -231,16 +246,16 @@ footer .footer-dot {
 }
 
 footer a:nth-child(1):hover ~ .footer-dot {
-  -webkit-transform: translate(28px, 2px);
-  transform: translate(28px, 2px);
+  -webkit-transform: translate(35px, 2px);
+  transform: translate(35px, 2px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 footer a:nth-child(2):hover ~ .footer-dot {
-  -webkit-transform: translate(90px, 2px);
-  transform: translate(90px, 2px);
+  -webkit-transform: translate(110px, 2px);
+  transform: translate(110px, 2px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
