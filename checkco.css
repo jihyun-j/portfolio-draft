@@ -28,6 +28,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'outfit', sans-serif;
+    line-height: 26px; 
 }
 
 body {
@@ -123,25 +124,23 @@ svg {
 
 .wide-width {
     max-width: 900px;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 
 .narrow-width {
     max-width: 700px;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 
-.full-width {
+.full-width-nonbackground {
     margin: 0 -9999rem;
     padding: 3rem 9999rem;
-    background-color: var(--background-color);
-    line-height: 32px;
 }
 
 .full-width-background {
     margin: 0 -9999rem;
     padding: 3rem 9999rem;
-    line-height: 32px;
+    background-color: var(--background-color);
 }
 
 section img {
@@ -158,19 +157,25 @@ section img {
 }
 
 /************* Hero *************/
+.hero {
+    text-align: center;
+}
 
-.hero-grid-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-} 
+.intro {
+    margin-top: 50px;
+}
 
 .hero-title {
     color: var(--checkco-main);
-    font-size: var(--h4-font);
-    font-weight: 500;
+    font-size: var(--h3-font);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.hero-explain {
+    color: var(--checkco-darkgray);
+    font-size: var(--body-font);
+    font-weight: 300;
     margin-bottom: 10px;
 }
 
@@ -184,41 +189,24 @@ section img {
     color: var(--checkco-main);
 }
  
-.hero-explain {
-    color: var(--checkco-darkgray);
-    font-size: var(--body-font);
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-
 .hero-info-container {
-    color: var(--checkco-darkgray);
-    border-left: 1px solid var(--gray-color);
-    line-height: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center; 
+    margin-top: 50px;
 }
 
 .hero-info {
     margin-bottom: 10px;
     padding-left: 20px;
-    line-height: 25px;
-    /* font-size: var(--caption-font); */
 }
 
 .hero-info-title {
     color: var(--checkco-main);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /************* HMW *************/
-
-figure {
-    margin-bottom: 20px;
-}
-figcaption {
-    color: gray;
-    font-size: var(--caption-font);
-    line-height: 10px;
-}
 
 .center {
     padding: 50px 50px;
@@ -240,7 +228,6 @@ figcaption {
 }
 
 .goal-content h4 {
-    
     font-weight: 500;
 }
 
@@ -249,7 +236,6 @@ figcaption {
     margin-bottom: 30px;
 }
 .assumptions h4 {
-    
     font-weight: 500;
 }
 
@@ -285,12 +271,12 @@ figcaption {
 
 
 /************* Solution *************/
-.full-width img,
+.full-width-nonbackground  img,
 .full-width-background img{
    max-width: 100%;
 }
 
-.full-width .grid,
+.full-width-nonbackground  .grid,
 .full-width-background .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -308,6 +294,18 @@ figcaption {
 
 .feature-explain-right {
     margin-right: 50px;
+}
+
+.sketches img {
+    width: 50%;
+}
+
+
+.sketches {
+    display: flex;
+    flex-direction: row;
+   
+    
 }
 
 
